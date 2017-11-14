@@ -1,5 +1,6 @@
 package com.example.user.guess100;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -32,13 +33,22 @@ public class MainActivity extends AppCompatActivity {
         Button b = (Button) findViewById(R.id.send);
         int num = Integer.parseInt(edNumber.getText().toString());
         if (num > ram) {
-            i.setText(min + " to " + num);
+            new AlertDialog.Builder(this)
+                    .setMessage(min +" to "+num)
+                    .setPositiveButton("OK",null)
+                    .show();
             max = num;
         } else if (ram > num) {
-            i.setText(num + " to " + max);
+            new AlertDialog.Builder(this)
+                    .setMessage(num +" to "+max)
+                    .setPositiveButton("OK",null)
+                    .show();
             min = num;
         } else {
-            i.setText(num + "bomb!!");
+            new AlertDialog.Builder(this)
+                    .setMessage(num +"bomb!!!")
+                    .setPositiveButton("OK",null)
+                    .show();
         }
     }
 }
