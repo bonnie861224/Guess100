@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Guess100</string>
+    <string name="textview">TextView</string>
+    <string name="send">SEND</string>
+    <string name="please_enter_a_number_1_100">Please enter a number(1-100)</string>
 </resources>
